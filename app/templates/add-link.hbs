@@ -1,21 +1,23 @@
 <h3>Add Link</h3>
-<div>
-  <label>
-    Title
-    {{input value=title placeholder='Title'}}
-  </label>
-</div>
-<div>
-  <label>
-    Url
-    {{input value=url placeholder='Url'}}
-  </label>
-</div>
-<div>
-  <label>
-    Description
-    {{input value=description placeholder='Description'}}
-  </label>
-</div>
-<button {{action 'addLink'}}>Submit</button>
+<form {{action 'addLink' on='submit'}}>
+  <div>
+    <label>
+      Title
+      {{input value=title placeholder='Title'}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Url
+      {{input value=url placeholder='Url'}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Description
+      {{input value=description placeholder='Description'}}
+    </label>
+  </div>
+  <button type='submit'>Submit</button>
+</form>
 {{outlet}}
