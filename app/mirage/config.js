@@ -1,5 +1,6 @@
 export default function() {
   this.get('/links');
+  this.post('/links');
 
   // These comments are here to help you get started. Feel free to delete them.
 
