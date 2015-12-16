@@ -1,1 +1,15 @@
+<h3>Signin</h3>
+<div>
+  <label>
+    Username
+    {{input value=username placeholder='Username'}}
+  </label>
+</div>
+<div>
+  <label>
+    Password
+    {{input type='password' value=password placeholder='Password'}}
+  </label>
+</div>
+<button {{action 'signin'}}>Signin</button>
 {{outlet}}
