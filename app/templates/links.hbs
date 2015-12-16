@@ -1,0 +1,12 @@
+<h3>Links</h3>
+<ul>
+  {{#each model as |link|}}
+    <li>
+      <a href={{link.url}}>{{link.title}}</a>
+      <div>
+        {{link.description}}
+      </div>
+    </li>
+  {{/each}}
+</ul>
+{{outlet}}
