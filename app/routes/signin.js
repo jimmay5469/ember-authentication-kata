@@ -9,7 +9,13 @@ export default Ember.Route.extend({
       this.get('session').authenticate('authenticator:oauth2', username, password).then(()=> {
         this.set('controller.username', '');
         this.set('controller.password', '');
-        this.transitionTo('add-link');
+
+        let attemptedTransition = this.get('session.attemptedTransition');
+        if(attemptedTransition) {
+          attemptedTransition.retry();
+        } else {
+          this.transitionTo('links');
+        }
       });
     }
   }
