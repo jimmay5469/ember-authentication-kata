@@ -1,3 +1,25 @@
+<h3>Add Link</h3>
+<form {{action 'addLink' on='submit'}}>
+  <div>
+    <label>
+      Title
+      {{input value=newTitle placeholder='Title'}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Url
+      {{input value=newUrl placeholder='Url'}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Description
+      {{input value=newDescription placeholder='Description'}}
+    </label>
+  </div>
+  <button type='submit'>Submit</button>
+</form>
 <h3>Links</h3>
 <ul>
   {{#each model as |link|}}

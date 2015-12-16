@@ -1,18 +1,10 @@
 <h2 id="title">Welcome to Ember-Links</h2>
-<ul>
-  <li>
-    {{#link-to 'links'}}Links{{/link-to}}
-  </li>
-  <li>
-    {{#link-to 'add-link'}}Add link{{/link-to}}
-  </li>
-  <li>
-    {{#if session.isAuthenticated}}
+{{#if session.isAuthenticated}}
+  <ul>
+    <li>
       <a href='#' {{action 'signout'}}>Signout</a>
-    {{else}}
-      {{#link-to 'signin'}}Signin{{/link-to}}
-    {{/if}}
-  </li>
-</ul>
+    </li>
+  </ul>
+{{/if}}
 
 {{outlet}}
